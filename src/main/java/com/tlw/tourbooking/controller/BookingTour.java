@@ -37,10 +37,9 @@ public class BookingTour extends HttpServlet {
         String dateInput = request.getParameter("departureDate");
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         try {
-             departureDate = format.parse(dateInput); // Chuyển đổi chuỗi thành Date
-            // Bây giờ bạn có thể sử dụng biến date theo kiểu Date
+             departureDate = format.parse(dateInput);
         } catch (java.text.ParseException e) {
-            // Xử lý lỗi nếu chuỗi không hợp lệ
+            System.out.println(e.getMessage());
         }
         int noAdults = Integer.parseInt(request.getParameter("noAdults"));
         int noChildren = Integer.parseInt(request.getParameter("noChildren"));

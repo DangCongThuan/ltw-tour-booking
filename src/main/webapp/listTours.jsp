@@ -27,10 +27,11 @@
     </style>
 </head>
 <body>
+    <h1>Các chương trình DU LỊCH</h1>
     <table >
         <thead>
         <tr>
-            <th>Chương trinh</th>
+            <th>Chương trình</th>
             <th>Lịch khởi hành</th>
             <th>Giá</th>
             <th>Đặt</th>
@@ -50,7 +51,7 @@
                         ${tour.departureSchedule}
                     </td>
                     <td>
-                        <fmt:formatNumber value="${tour.price}" type="currency" />
+                        <fmt:formatNumber value="${tour.price}" type="currency" currencySymbol=""/>
                     </td>
                     <td>
                         <button><a style="text-decoration: none" href="booking-tour?id=${tour.id}">Đặt tour</a></button>
